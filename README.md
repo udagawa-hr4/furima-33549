@@ -3,16 +3,16 @@
 # users
 
 
-| Column               | Type       | Option                 |
-|----------------------|------------|------------------------|
-|nickname              |string      |null:false              |
-|email                 |string      |null:false              |
-|encrypted_password    |string      |null:false              |
-|first_name            |string      |null:false              |
-|family_name           |string      |null:false              |
-|read_first            |string      |null:false              |
-|read_family           |string      |null:false              |
-|birthday_id           |date        |null:false              |
+| Column               | Type       | Option                           |
+|----------------------|------------|----------------------------------|
+|nickname              |string      |null:false                        |
+|email                 |string      |null:false,index: { unique: true }|
+|encrypted_password    |string      |null:false                        |
+|first_name            |string      |null:false                        |
+|family_name           |string      |null:false                        |
+|read_first            |string      |null:false                        |
+|read_family           |string      |null:false                        |
+|birthday_id           |date        |null:false                        |
 
 ### Association
 
@@ -61,7 +61,7 @@
 |address               |string      |null:false                  |
 |building_name         |string      |                            |
 |phone_number          |string      |null:false                  |
-|purchases             |references  |null:false,foreign_key: true|
+|purchase              |references  |null:false,foreign_key: true|
 
 ### Association
 belongs_to :purchase
