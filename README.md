@@ -64,4 +64,4 @@
 |purchase_info         |references  |null:false,foreign_key: true|
 
 ### Association
-belongs_to :purchase_info
+belongs_to :purchase
