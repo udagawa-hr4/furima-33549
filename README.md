@@ -14,10 +14,11 @@
 |read_family           |string      |null:false                        |
 |birthday              |date        |null:false                        |
 
+
 ### Association
 
 -has_many :items
--has_many :purchase_infos
+-has_many :purchases
 
 ## items
 
@@ -39,7 +40,7 @@
 -has_one :purchase_info
 -belongs_to :user
 
-## purchase_info
+## purchases
 
 | Column               | Type       | Option                     |
 |----------------------|------------|----------------------------|
@@ -61,7 +62,7 @@
 |address               |string      |null:false                  |
 |building_name         |string      |                            |
 |phone_number          |string      |null:false                  |
-|purchase_info         |references  |null:false,foreign_key: true|
+|purchase              |references  |null:false,foreign_key: true|
 
 ### Association
-belongs_to :purchase_info
+belongs_to :purchase
