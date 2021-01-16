@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-01-15T13:05:06.640Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="CCeh_vi4gPg663ZbCsuw" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2021-01-15T13:43:23.341Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36" etag="GY5JjFdAniy7Iv7ZqoC8" version="13.10.0" type="embed">
     <diagram id="-FHetPxpfdkIIegwqUKT" name="ページ1">
-        <mxGraphModel dx="1468" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2088" dy="1142" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -41,10 +41,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="237" value="shopping_address" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=16;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;dashPattern=1 2;labelBackgroundColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="-360" y="890" width="400" height="250" as="geometry"/>
+                    <mxGeometry x="-360" y="890" width="400" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="238" value="postal_code               null:false             &#10;prefectures_id            null:false             active hash&#10;city                             null:false&#10;address                      nullfalse&#10;building_name&#10;phone_number          null:false &#10;purchase_info&#10;&#10;&#10;&#10;&#10;&#10;&#10;belongs_to purchase_info&#10;&#10;&#10;                       " style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=16;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="237" vertex="1">
-                    <mxGeometry y="30" width="400" height="220" as="geometry"/>
+                <mxCell id="238" value="postal_code               null:false             &#10;prefectures_id            null:false             active hash&#10;city                             null:false&#10;address                      nullfalse&#10;building_name&#10;phone_number          null:false &#10;purchase_info            外部キー&#10;&#10;&#10;&#10;&#10;belongs_to purchase_info&#10;&#10;&#10;                       " style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=16;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="237" vertex="1">
+                    <mxGeometry y="30" width="400" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="239" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="237" target="233" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
