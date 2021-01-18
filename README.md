@@ -1,4 +1,5 @@
 # README
+
 ## users
 | Column             | Type        | Option                   |
 | -------------------|-------------|--------------------------|
@@ -10,10 +11,12 @@
 | read_first         | string      | null:false               |
 | read_family        | string      | null:false               |
 | birthday           | date        | null:false               |
+
 ### Association
 - has_many :items
 - has_many :purchases
 ## items
+
 | Column              | Type       | Option                       |
 |---------------------|------------|------------------------------|
 | name                | string     | null:false                   |
@@ -25,19 +28,23 @@
 | preparation_day_id  | integer    | null:false                   |
 | price               | integer    | null:false                   |
 | user                | references | null:false,foreign_key: true |
+
 ### Association
 - belongs_to :user
 - has_one :purchase
+
 ## purchases
 | Column | Type       | Option                       |
 |--------|------------|------------------------------|
 | user   | references | null:false,foreign_key: true |
 | item   | references | null:false,foreign_key: true |
 ### Association
+
 - belongs_to :item
 - belongs_to :user
-- has_one :shopping
-## shoppings
+- has_one :shopping_address
+
+## shopping_address
 | Column         | Type       | Option                       |
 |----------------|------------|------------------------------|
 | postal_code    | string     | null:false                   |
@@ -47,5 +54,7 @@
 | building_name  | string     |                              |
 | phone_number   | string     | null:false                   |
 | purchase       | references | null:false,foreign_key: true |
+
+
 ### Association
 - belongs_to :purchase
