@@ -59,11 +59,7 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank", "Price is not a number", "Price is not included in the list")
       end
-      it 'priceが¥300~¥9999999の間でないと登録できないこと' do
-        @item.price = 12
-        @item.valid?
-        expect(@item.errors.full_messages).to include("Price is not included in the list")
-      end
+      
       it 'priceは半角数字出ないと登録できないこと' do
         @item.price = "１２"
         @item.valid?
