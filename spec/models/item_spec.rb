@@ -94,6 +94,17 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Postage type must be greater than or equal to 1")
       end
+      it 'priceが299円以下の場合登録できないこと' do
+        @item.price = 299
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price is not included in the list")
+      end
+      it 'priceが10000000円以上の場合は登録できないこと' do
+        @item.price = 10000000
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price is not included in the list")
+      end
+
     end
 
   end
