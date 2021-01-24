@@ -112,6 +112,16 @@ RSpec.describe PurchaseShopping, type: :model do
         @purchase_shopping.valid?
         expect(@purchase_shopping.errors.full_messages).to include("Phone number is invalid")
       end
+      it "user_idが空だと登録できないこと" do
+        @purchase_shopping.user_id = nil
+        @purchase_shopping.valid?
+        expect(@purchase_shopping.errors.full_messages).to include("User can't be blank")
+      end
+      it "item_idが空だと登録できないこと" do
+        @purchase_shopping.item_id = nil
+        @purchase_shopping.valid?
+        expect(@purchase_shopping.errors.full_messages).to include("Item can't be blank")
+      end
     end
   end
 end

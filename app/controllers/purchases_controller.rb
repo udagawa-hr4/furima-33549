@@ -1,15 +1,13 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!,only: [:index,:create]
-
+  before_action :find_params,only: [:index,:create]
   def index
-    @item = Item.find(params[:item_id])
     @purchase_shopping = PurchaseShopping.new
    if  @item.purchase != nil || @item.user_id ==current_user.id
        redirect_to root_path
     end
   end
   def create
-    @item = Item.find(params[:item_id])
     @purchase_shopping = PurchaseShopping.new(purchase_params)
     if @purchase_shopping.valid?
           
@@ -29,9 +27,11 @@ class PurchasesController < ApplicationController
       Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
       Payjp::Charge.create(
         amount: @item.price,
-        # amount: purchase_params[:price], 
         card: purchase_params[:token] ,
         currency: 'jpy',       
       )
+    end
+    def find_params
+      @item = Item.find(params[:id])
     end
 end
